@@ -1,0 +1,60 @@
+###
+### Création d'un film
+###
+
+POST http://localhost:3002/api/films
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Inception",
+    "releaseYear": 2010,
+    "genre": "Science Fiction",
+    "directors": [
+        {
+            "id": 1,
+            "name": "Christopher Nolan",
+            "birthDate": "1970-07-30",
+            "biography": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter. He is one of the highest-grossing directors in history, and among the most acclaimed and influential filmmakers of the 21st century."
+        }
+    ]
+}
+
+###
+### Récupération de tous les films
+###
+
+GET http://localhost:3002/api/films
+
+###
+### Récupération d'un film spécifique
+###
+
+GET http://localhost:3002/api/films/1
+
+###
+### Mise à jour d'un film spécifique
+###
+
+PUT http://localhost:3002/api/films/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Inceptionssssssss",
+    "releaseYear": 2010,
+    "genre": "Science Fiction",
+    "directors": [
+        {
+            "name": "Christopher Nolan",
+            "birthDate": "1970-07-30",
+            "biography": "Updated biography of Christopher Nolan."
+        }
+    ]
+}
+
+###
+### Suppression d'un film spécifique
+###
+
+DELETE http://localhost:3002/api/films/1
